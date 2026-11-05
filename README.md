@@ -20,7 +20,7 @@ curl -Ls https://raw.githubusercontent.com/dwijnand/sbt-extras/master/sbt > ~/bi
 Alternatively you can install with [Homebrew](https://brew.sh/):
 
 ```bash
-brew install --HEAD paulp/extras/sbtx
+brew install --HEAD dwijnand/extras/sbtx
 ```
 
 **NOTE**: This will install sbt-extras as `sbtx` (to avoid clashing with the official sbt formula). If you prefer you can `alias sbt=sbtx`.
@@ -31,10 +31,10 @@ sbt -v[erbosely] creating a new project built with the latest scala 2.12.x.
 
 ```
 % sbt -v -212 -sbt-create about
-[addSbt] arg = '++ 2.12.17'
+[addSbt] arg = '++ 2.12.21'
 [residual] arg = 'about'
 No extra sbt options have been defined
-Detected sbt version 1.8.2
+Detected sbt version 1.13.1
 Using default jvm options
 Detected Java version: 8
 # Executing command line:
@@ -42,22 +42,22 @@ java
 -Xms512m
 -Xss2m
 -jar
-$HOME/.sbt/launchers/1.8.2/sbt-launch.jar
-"++ 2.12.17"
+$HOME/.sbt/launchers/1.13.1/sbt-launch.jar
+"++ 2.12.21"
 about
 
 saving stty: [..]
 [warn] No sbt.version set in project/build.properties, base directory: [..]
-[info] Setting version to 2.12.17
+[info] Setting version to 2.12.21
 [info] Loading settings for project global-plugins from [..] ...
 [info] Loading global plugins from $HOME/.dotfiles/.sbt/1.0/plugins
 [info] Set current project to [..] (in build file:[..])
-[info] Setting Scala version to 2.12.17 on 1 projects.
+[info] Setting Scala version to 2.12.21 on 1 projects.
 [info] Reapplying settings...
 [info] Set current project to [..] (in build file:[..])
-[info] This is sbt 1.8.2
+[info] This is sbt 1.13.1
 [info] The current project is ProjectRef(uri("file:[..]"), "[..]") [..]
-[info] The current project is built against Scala 2.12.17
+[info] The current project is built against Scala 2.12.21
 [info] Available Plugins
 [..]
 [info] sbt, sbt plugins, and build definitions are using Scala 2.12.7
@@ -92,10 +92,10 @@ are not special.
   -prompt <expr>     Set the sbt prompt; in expr, 's' is the State and 'e' is Extracted
   -script <file>     Run the specified file as a scala script
 
-  # sbt version (default: sbt.version from project/build.properties if present, otherwise 1.8.2)
-  -sbt-version <version>  use the specified version of sbt (default: 1.8.2)
-  -sbt-force-latest       force the use of the latest release of sbt: 1.8.2
-  -sbt-dev                use the latest pre-release version of sbt: 1.8.2
+  # sbt version (default: sbt.version from project/build.properties if present, otherwise 1.13.1)
+  -sbt-version <version>  use the specified version of sbt (default: 1.13.1)
+  -sbt-force-latest       force the use of the latest release of sbt: 1.13.1
+  -sbt-dev                use the latest pre-release version of sbt: 1.13.1
   -sbt-jar      <path>    use the specified jar as the sbt launcher
   -sbt-launch-dir <path>  directory to hold sbt launchers (default: ~/.sbt/launchers)
   -sbt-launch-repo <url>  repo url for downloading sbt launcher jar (default: https://repo.scala-sbt.org/scalasbt/maven-releases)
@@ -105,8 +105,8 @@ are not special.
   -29                        use 2.9.3
   -210                       use 2.10.7
   -211                       use 2.11.12
-  -212                       use 2.12.17
-  -213                       use 2.13.10
+  -212                       use 2.12.21
+  -213                       use 2.13.12
   -scala-home <path>         use the scala build at the specified directory
   -scala-version <version>   use the specified version of scala
   -binary-version <version>  use the specified scala version when searching for dependencies
